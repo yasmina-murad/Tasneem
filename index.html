@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tasneem — Registered Nurse Portfolio | Emergency Care Specialist</title>
+    <meta name="description"
+        content="Tasneem — Registered Nurse specializing in emergency care, patient-centered practice, certified in BLS & ACLS. Professional nursing services in Cairo, Egypt.">
+    <meta name="keywords"
+        content="Registered Nurse, Emergency Care, BLS Certified, ACLS Certified, Nursing Portfolio, Cairo Nurse, Patient Care, Healthcare Professional">
+    <meta name="author" content="Tasneem">
+    <meta property="og:title" content="Tasneem — Registered Nurse Portfolio">
+    <meta property="og:description"
+        content="Professional Registered Nurse specializing in emergency care and patient-centered practice.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #f6fbff;
+            --card: #ffffff;
+            --primary: #0a8cd2;
+            --primary-dark: #0573b8;
+            --secondary: #1abc9c;
+            --dark: #0b2149;
+            --muted: #6b7280;
+            --light-muted: #a0aec0;
+            --glass: rgba(255, 255, 255, 0.6);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --fw-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            --fw-rounded: 'Nunito', sans-serif;
+            --shadow: 0 10px 30px rgba(11, 33, 73, 0.08);
+            --shadow-sm: 0 6px 20px rgba(11, 33, 73, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--fw-sans);
+            background: linear-gradient(180deg, var(--bg), #eef7fb 60%);
+            color: var(--dark);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(11, 33, 73, 0.05);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: 700;
+            font-family: var(--fw-rounded);
+            font-size: 24px;
+            box-shadow: 0 6px 18px rgba(10, 140, 210, 0.25);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(10, 140, 210, 0.35);
+        }
+
+        .brand-text h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .brand-text .tagline {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .desktop-nav a {
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .desktop-nav a:not(.cta):after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .desktop-nav a:not(.cta):hover:after {
+            width: 70%;
+        }
+
+        .desktop-nav a.cta {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 6px 18px rgba(10, 140, 210, 0.18);
+            transition: var(--transition);
+        }
+
+        .desktop-nav a.cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(10, 140, 210, 0.25);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(10, 140, 210, 0.1);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 20px;
+            transition: right 0.4s ease;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .mobile-menu-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .mobile-menu-content a {
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-content a:hover {
+            background-color: rgba(10, 140, 210, 0.1);
+            color: var(--primary);
+        }
+
+        .mobile-menu-content a.cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), var(--card));
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(6px);
+        }
+
+        .intro-label {
+            font-size: 14px;
+            color: var(--muted);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .intro-label i {
+            color: var(--primary);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin: 12px 0 10px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            color: var(--muted);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 6px 18px rgba(10, 140, 210, 0.18);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(10, 140, 210, 0.25);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid rgba(11, 33, 73, 0.1);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background-color: rgba(10, 140, 210, 0.05);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 220px;
+            background: var(--card);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(11, 33, 73, 0.1);
+        }
+
+        .stat-number {
+            font-weight: 800;
+            font-size: 28px;
+            color: var(--primary);
+        }
+
+        .stat-text .title {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .stat-text .subtitle {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* Profile Card */
+        .profile-card {
+            padding: 25px;
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), var(--card));
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(11, 33, 73, 0.1);
+            position: relative;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .avatar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(10, 140, 210, 0.1));
+            pointer-events: none;
+        }
+
+        .profile-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .profile-tagline {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(10, 140, 210, 0.1);
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            background: rgba(10, 140, 210, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 25px rgba(11, 33, 73, 0.1);
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .skill {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            width: 180px;
+            flex-shrink: 0;
+        }
+
+        .progress {
+            height: 10px;
+            background: #eef6fb;
+            border-radius: 999px;
+            overflow: hidden;
+            flex-grow: 1;
+            max-width: 300px;
+        }
+
+        .progress-bar {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 999px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Experience */
+        .experience {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .exp-item {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(11, 33, 73, 0.05);
+        }
+
+        .exp-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .exp-dates {
+            min-width: 110px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .exp-content h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .exp-content .muted {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Certificates */
+        .certs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cert {
+            padding: 10px 15px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(180deg, #fff, #f8fdff);
+            border: 1px solid rgba(11, 33, 73, 0.03);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .cert:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(11, 33, 73, 0.08);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .test {
+            padding: 20px;
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, #fcfcff, #f8fbff);
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .test:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(11, 33, 73, 0.08);
+        }
+
+        .test strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Contact */
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(11, 33, 73, 0.1);
+            font-family: var(--fw-sans);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(10, 140, 210, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            background: linear-gradient(180deg, #f8fdff, #f0f9ff);
+            padding: 25px;
+            border-radius: var(--radius);
+        }
+
+        .contact-info h4 {
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(10, 140, 210, 0.1);
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding: 30px 0;
+            color: var(--muted);
+            text-align: center;
+            border-top: 1px solid rgba(11, 33, 73, 0.05);
+            font-size: 14px;
+        }
+
+        /* Medical Animation */
+        .medical-animation {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: var(--radius);
+            margin: 30px 0;
+            background: linear-gradient(135deg, #f0f9ff, #e6f4ff);
+        }
+
+        .heartbeat-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(10, 140, 210, 0.2);
+            overflow: hidden;
+        }
+
+        .heartbeat-line::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            animation: heartbeat 3s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(100%);
+            }
+        }
+
+        .pulse-dot {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 0 0 rgba(10, 140, 210, 0.7);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(10, 140, 210, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(10, 140, 210, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(10, 140, 210, 0);
+            }
+        }
+
+        .medical-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .medical-icon {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(10, 140, 210, 0.2);
+            animation: float-icon 15s linear infinite;
+        }
+
+        @keyframes float-icon {
+            0% {
+                transform: translateY(200px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.7;
+            }
+
+            90% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Utility Classes */
+        .muted {
+            color: var(--muted);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 {
+            margin-top: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 30px;
+        }
+
+        .mb-1 {
+            margin-bottom: 10px;
+        }
+
+        .mb-2 {
+            margin-bottom: 20px;
+        }
+
+        .mb-3 {
+            margin-bottom: 30px;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+
+            .hero,
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-form-container {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                order: -1;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+
+            .mobile-nav {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .stat-card {
+                min-width: 100%;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .card,
+            .hero-content,
+            .profile-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .exp-item {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .exp-dates {
+                min-width: auto;
+            }
+
+            .skill {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .progress {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="brand">
+                <div class="logo">T</div>
+                <div class="brand-text">
+                    <h1>Tasneem — Registered Nurse</h1>
+                    <div class="tagline">Patient-centered • Emergency Care • BLS & ACLS Certified</div>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#contact" class="cta">Contact</a>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="mobile-menu-btn" id="closeMenuBtn" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-content">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact" class="cta">Contact</a>
+            </div>
+        </div>
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <div class="intro-label">
+                    <i class="fas fa-user-nurse"></i> Nurse Portfolio • Professional Profile
+                </div>
+                <h1 class="hero-title">Tasneem — <span>Registered Nurse</span></h1>
+                <p class="hero-subtitle">Compassionate and reliable nurse with extensive experience in emergency care,
+                    patient education, and clinical documentation. Skilled in medication administration, wound care, and
+                    infection control with a commitment to patient safety and positive outcomes.</p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#contact">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                    <a class="btn btn-secondary" href="#" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <button id="playIntro" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> Play Intro
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-text">
+                            <div class="title">Years Experience</div>
+                            <div class="subtitle">Emergency & general wards</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">BLS • ACLS</div>
+                        <div class="stat-text">
+                            <div class="title">Certifications</div>
+                            <div class="subtitle">Basic & advanced life support</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-text">
+                            <div class="title">Patients Assisted</div>
+                            <div class="subtitle">With positive outcomes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-card reveal">
+                <div class="avatar">
+                    <img src="tasneem.jpg"
+                        alt="Tasneem portrait - Registered Nurse">
+                </div>
+                <div class="profile-meta">
+                    <div class="profile-name">Tasneem — Registered Nurse (تسنيم)</div>
+                    <div class="profile-tagline">Emergency Care • Patient Education • NICU Support</div>
+                    <div class="badges">
+                        <span class="badge">BLS</span>
+                        <span class="badge">ACLS</span>
+                        <span class="badge">RN License</span>
+                        <span class="badge">Emergency Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Animation -->
+    <div class="container">
+        <div class="medical-animation">
+            <div class="heartbeat-line"></div>
+            <div class="pulse-dot"></div>
+            <div class="medical-icons">
+                <!-- Icons will be added via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-grid">
+            <div class="main-content">
+                <!-- About Section -->
+                <section id="about" class="card reveal">
+                    <h2>About Tasneem</h2>
+                    <p class="muted mb-2">I am a dedicated Registered Nurse focused on delivering safe, patient-centered
+                        care. With extensive experience responding to emergency situations, administering medications,
+                        and collaborating with multidisciplinary teams, I am committed to improving patient outcomes
+                        through compassionate, evidence-based practice.</p>
+
+                    <div class="contact-highlights">
+                        <div class="stat-card">
+                            <i class="fas fa-map-marker-alt" style="color: var(--primary); font-size: 1.5rem;"></i>
+                            <div class="stat-text">
+                                <div class="title">Al Mansoura, Egypt</div>
+                                <div class="subtitle">Available for shifts locally</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <i class="fas fa-phone" style="color: var(--primary); font-size: 1.5rem;"></i>
+                            <div class="stat-text">
+                                <div class="title">+20 100 539 1598</div>
+                                <div class="subtitle">Call or WhatsApp</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <i class="fas fa-envelope" style="color: var(--primary); font-size: 1.5rem;"></i>
+                            <div class="stat-text">
+                                <div class="title">tasneem.email@example.com</div>
+                                <div class="subtitle">Email for inquiries</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills" class="card reveal">
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">Patient Assessment</div>
+                            <div class="progress">
+                                <span class="progress-bar" style="width: 92%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Emergency Response</div>
+                            <div class="progress">
+                                <span class="progress-bar" style="width: 88%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Medication Administration</div>
+                            <div class="progress">
+                                <span class="progress-bar" style="width: 85%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Wound Care</div>
+                            <div class="progress">
+                                <span class="progress-bar" style="width: 80%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Infection Control</div>
+                            <div class="progress">
+                                <span class="progress-bar" style="width: 86%"></span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Patient Education</div>
+                            <div class="progress">
+                                <span class="progress-bar" style="width: 83%"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience" class="card reveal">
+                    <h2>Experience</h2>
+                    <div class="experience">
+                        <div class="exp-item">
+                            <div class="exp-dates">2021 — Present</div>
+                            <div class="exp-content">
+                                <h4>Staff Nurse — Al Mansoura University Hospital</h4>
+                                <p class="muted">Emergency & general ward. Responsibilities: triage, medication
+                                    administration, IV access, patient education, documentation, and collaboration with
+                                    multidisciplinary teams to ensure comprehensive patient care.</p>
+                            </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-dates">2019 — 2021</div>
+                            <div class="exp-content">
+                                <h4>Nurse — Al Noor Clinic</h4>
+                                <p class="muted">Assisted in outpatient care, vaccination campaigns, pre-op preparation,
+                                    and patient education. Developed strong communication skills while working with
+                                    diverse patient populations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Case Studies -->
+                <section id="cases" class="card reveal">
+                    <h2>Selected Case Studies</h2>
+                    <ul class="muted">
+                        <li><strong>Respiratory Distress Response:</strong> Managed rapid response for a patient in
+                            respiratory distress; stabilized and coordinated ICU transfer within critical time frame.
+                        </li>
+                        <li><strong>Wound Care Protocol:</strong> Led wound care and infection control protocols for a
+                            12-bed post-operative ward, reducing infection rates by 30% over six months.</li>
+                        <li><strong>NICU Support:</strong> Provided specialized NICU support for premature infants
+                            including feeding, monitoring, and comprehensive family education.</li>
+                    </ul>
+                </section>
+
+                <!-- Testimonials -->
+                <section id="testimonials" class="card reveal">
+                    <h2>Testimonials</h2>
+                    <div class="testimonials">
+                        <div class="test">
+                            <strong>Dr. Ahmed, Head of Emergency Department</strong>
+                            <div class="muted">"Tasneem is professional, focused and always puts patient safety first.
+                                Her quick thinking during emergency situations has been invaluable to our team."</div>
+                        </div>
+                        <div class="test">
+                            <strong>Patient Family Member</strong>
+                            <div class="muted">"Compassionate, knowledgeable, and thorough. Thank you for the excellent
+                                care provided to our father during his stay. You made a difficult time much easier for
+                                our family."</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <!-- Certificates -->
+                <section id="certificates" class="card reveal">
+                    <h2>Certificates</h2>
+                    <div class="certs">
+                        <div class="cert">BLS — Basic Life Support</div>
+                        <div class="cert">ACLS — Advanced Cardiovascular Life Support</div>
+                        <div class="cert">RN License — Registered Nurse</div>
+                        <div class="cert">Infection Control</div>
+                        <div class="cert">Emergency Nursing</div>
+                        <div class="cert">Patient Safety</div>
+                    </div>
+                </section>
+
+                <!-- Quick Contact -->
+                <section class="card reveal">
+                    <h2>Quick Contact</h2>
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <div class="muted">tasneem.email@example.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <div class="muted">+20 100 539 1598</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location</strong>
+                        <div class="muted">AL Mansoura, Egypt</div>
+                    </div>
+                </section>
+
+                <!-- Availability -->
+                <section class="card reveal">
+                    <h2>Availability</h2>
+                    <p class="muted mb-2">Open to full-time and part-time roles. Available for shifts, emergency cover,
+                        and temporary assignments. Flexible scheduling to meet patient care needs.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contact">Request Shift</a>
+                        <a class="btn btn-secondary" href="mailto:tasneem.email@example.com">Email Now</a>
+                    </div>
+                </section>
+
+                <!-- Emergency Quick Info -->
+                <section class="card reveal">
+                    <h2>Emergency Response</h2>
+                    <p class="muted mb-2">Trained in rapid assessment and intervention for critical situations including
+                        cardiac arrest, respiratory distress, and trauma.</p>
+                    <div class="badges">
+                        <span class="badge">CPR Certified</span>
+                        <span class="badge">AED Trained</span>
+                        <span class="badge">Triage Expert</span>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card reveal">
+            <h2>Contact Tasneem</h2>
+            <div class="contact-form-container">
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" class="form-control" placeholder="Subject (e.g. Shift request, Inquiry)">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" class="form-control" placeholder="Your message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="formMsg" class="muted mt-1" aria-live="polite"></div>
+                    </div>
+                </form>
+                <div class="contact-info">
+                    <h3>Why Choose Tasneem?</h3>
+                    <p class="muted mb-2">Patient-focused care with a track record of positive outcomes. Proven triage
+                        skills, excellent communication, and meticulous record-keeping. Trustworthy, punctual, and
+                        committed to continuous professional development.</p>
+
+                    <div class="contact-item">
+                        <strong>Response Time</strong>
+                        <div class="muted">Typically within 24 hours</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>Languages</strong>
+                        <div class="muted">Arabic (Native), English (Professional)</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>Connect</strong>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Tasneem — Registered Nurse. All rights reserved.</p>
+            <p class="muted mt-1">Built with care for the healthcare community.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        menuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.mobile-menu-content a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Reveal animation on scroll
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Initial check
+        revealOnScroll();
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        const formMsg = document.getElementById('formMsg');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Basic validation
+            if (!name || !email || !message) {
+                formMsg.textContent = 'Please fill in all required fields.';
+                formMsg.style.color = '#e53e3e';
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                formMsg.textContent = 'Please enter a valid email address.';
+                formMsg.style.color = '#e53e3e';
+                return;
+            }
+
+            // Simulate form submission
+            formMsg.textContent = 'Sending your message...';
+            formMsg.style.color = 'var(--primary)';
+
+            // In a real application, you would send data to a server here
+            setTimeout(() => {
+                formMsg.textContent = 'Thank you! Your message has been sent. I will respond as soon as possible.';
+                formMsg.style.color = '#1abc9c';
+                contactForm.reset();
+
+                // Reset message after 5 seconds
+                setTimeout(() => {
+                    formMsg.textContent = '';
+                }, 5000);
+            }, 1500);
+        });
+
+        // Play intro button
+        const playIntroBtn = document.getElementById('playIntro');
+        playIntroBtn.addEventListener('click', function () {
+            // Visual feedback
+            const profileCard = document.querySelector('.profile-card');
+            profileCard.style.animation = 'none';
+
+            setTimeout(() => {
+                profileCard.style.animation = 'float 6s ease-in-out infinite';
+            }, 10);
+
+            // Simulate playing an intro
+            formMsg.textContent = "Hello, I'm Tasneem, a dedicated Registered Nurse...";
+            formMsg.style.color = 'var(--primary)';
+
+            // Clear message after 4 seconds
+            setTimeout(() => {
+                formMsg.textContent = '';
+            }, 4000);
+        });
+
+        // Medical animation - add floating icons
+        const medicalIconsContainer = document.querySelector('.medical-icons');
+        const medicalIcons = ['fa-heart', 'fa-heartbeat', 'fa-stethoscope', 'fa-syringe', 'fa-pills', 'fa-ambulance', 'fa-user-md', 'fa-plus-square'];
+
+        for (let i = 0; i < 15; i++) {
+            const icon = document.createElement('i');
+            icon.className = `medical-icon fas ${medicalIcons[Math.floor(Math.random() * medicalIcons.length)]}`;
+
+            // Random position and animation delay
+            icon.style.left = `${Math.random() * 100}%`;
+            icon.style.animationDelay = `${Math.random() * 15}s`;
+            icon.style.fontSize = `${Math.random() * 20 + 15}px`;
+
+            medicalIconsContainer.appendChild(icon);
+        }
+
+        // Add smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky header effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 6px 20px rgba(11, 33, 73, 0.1)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(11, 33, 73, 0.05)';
+                header.style.padding = '15px 0';
+            }
+        });
+    </script>
+</body>
+
+</html>
